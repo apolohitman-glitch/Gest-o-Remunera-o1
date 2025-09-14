@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.apolo.gestao" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Gestão Financeira</name>
+    <description>Aplicativo de gestão financeira com calendário e descontos.</description>
+    <author email="apolo@email.com" href="http://exemplo.com">
+        Powered by Apolo Barros
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="Orientation" value="portrait" />
+</widget>

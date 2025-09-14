@@ -1,0 +1,1 @@
+console.log('Gestão Financeira App iniciado');
