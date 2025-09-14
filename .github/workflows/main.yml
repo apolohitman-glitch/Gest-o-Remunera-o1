@@ -1,4 +1,4 @@
-name: Build APK
+name: Build APK Debug
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
       - name: Instalar Cordova
         run: npm install -g cordova
 
-      - name: Criar projeto Cordova e gerar APK
+      - name: Criar projeto Cordova e gerar APK debug
         run: |
           cordova create meuapp com.exemplo.meuapp "Meu App"
           rm -rf meuapp/www/*
@@ -28,9 +28,9 @@ jobs:
           cp -r !(meuapp) meuapp/www/
           cd meuapp
           cordova platform add android
-          cordova build android --release
-          # Renomear APK gerado
-          mv platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk MeuApp-PoweredByApoloBarros.apk
+          cordova build android
+          # Renomear APK debug
+          mv platforms/android/app/build/outputs/apk/debug/app-debug.apk MeuApp-PoweredByApoloBarros.apk
 
       - name: Salvar APK como artefato
         uses: actions/upload-artifact@v4
